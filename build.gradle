@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:+"
+    }
+}
+
+apply plugin: 'kotlin-platform-native'
+
+repositories {
+    maven {
+        url = 'repo'
+    }
+}
+
+
+sourceSets.main.component {
+    outputKinds = [ KLIBRARY ]
+    target 'host', 'wasm32'
+}
+
+// Setting targets
+sourceSets.test.component {
+    target 'host', 'wasm32'
+}
+
+
+dependencies {
+    implementation project('library')
+    expectedBy project('common')
+    testImplementation project('testLibrary')
+}

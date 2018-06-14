@@ -1,0 +1,1 @@
+fun expected() = 42

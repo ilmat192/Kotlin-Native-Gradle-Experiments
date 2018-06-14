@@ -1,0 +1,10 @@
+apply plugin: 'kotlin-platform-native'
+
+sourceSets.main.component {
+    target 'host', 'wasm32'
+    outputKinds = [ KLIBRARY ]
+}
+
+dependencies {
+    expectedBy project(':commonLib')
+}

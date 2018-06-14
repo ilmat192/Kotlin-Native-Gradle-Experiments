@@ -1,0 +1,18 @@
+apply plugin: 'kotlin-native'
+apply plugin: 'maven-publish'
+
+group 'test'
+version '1.0'
+
+sourceSets.main.component {
+    target 'host', 'wasm32'
+    outputKinds = [ KLIBRARY ]
+}
+
+publishing {
+    repositories {
+        maven {
+            url = '../repo'
+        }
+    }
+}
