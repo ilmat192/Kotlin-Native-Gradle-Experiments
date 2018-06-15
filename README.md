@@ -3,8 +3,8 @@
 #### To set up the project:
 
 1. Clone Kotlin/Native repository: https://github.com/JetBrains/kotlin-native.
-2. Checkout the `rework-gradle-plugin` in the Kotlin/Native repository.
-3. Build the Kotin/Native compiler. Open the directory with Kotlin/Native sources and run `./gradlew cross_dist`.
+2. Checkout the `rework-gradle-plugin` branch in the Kotlin/Native repository.
+3. Build the Kotin/Native compiler: run `./gradlew cross_dist` in the Kotlin/Native repository.
 4. Specify path to Kotlin/Native in [settings.gradle](settings.gradle) and [gradle.properties](gradle.properties).
 
 Now you can build the project:
