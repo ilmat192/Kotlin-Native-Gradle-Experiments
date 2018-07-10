@@ -1,16 +1,6 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
-        }
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:+"
-    }
+plugins {
+    id "org.jetbrains.kotlin.platform.native" version "0.8"
 }
-
-apply plugin: 'kotlin-platform-native'
 
 repositories {
     maven {

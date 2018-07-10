@@ -1,4 +1,6 @@
-apply plugin: 'kotlin-platform-native'
+plugins {
+    id "org.jetbrains.kotlin.platform.native"
+}
 
 sourceSets.main.component {
     target 'host', 'wasm32'

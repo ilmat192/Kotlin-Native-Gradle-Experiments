@@ -1,13 +1,5 @@
 buildscript {
     ext.kotlin_version = '1.2.41'
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        // Kotlin plugin is already bundled in the Kotlin/Native jar
-        // classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
 }
 
 apply plugin: 'kotlin-platform-common'

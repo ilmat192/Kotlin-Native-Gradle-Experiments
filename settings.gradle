@@ -1,12 +1,12 @@
 enableFeaturePreview('GRADLE_METADATA')
 
-// Set path to the Kotlin/Native repo
-def kotlinNativeRepo = ''
-
 include 'library'
 include 'testLibrary'
 include 'common'
 include 'commonLib'
 
-includeBuild "$kotlinNativeRepo/shared"
-includeBuild "$kotlinNativeRepo/tools/kotlin-native-gradle-plugin"
+// Set kotlinNativeRepo property to path to the Kotlin/Native repo to use the plugin built from sources.
+if (hasProperty("kotlinNativeRepo")) {
+    includeBuild "$kotlinNativeRepo/shared"
+    includeBuild "$kotlinNativeRepo/tools/kotlin-native-gradle-plugin"
+}

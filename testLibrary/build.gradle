@@ -1,4 +1,7 @@
-apply plugin: 'kotlin-native'
+plugins {
+    id "org.jetbrains.kotlin.native"
+}
+
 apply plugin: 'maven-publish'
 
 group 'test'
